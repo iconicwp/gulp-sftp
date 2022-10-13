@@ -286,7 +286,7 @@ module.exports = function (options) {
                 var highWaterMark = stream.highWaterMark||(16*1000);
                 var size = file.stat.size;
 
-
+                gutil.log('### UPLOADING FILE ###', gutil.colors.green(file));
                 file.pipe(stream); // start upload
 
                 stream.on('drain',function(){
